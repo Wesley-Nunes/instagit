@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-const StyledNavBar = styled.header`
+export const StyledTitle = styled.h1`
+  font: italic 4rem "Brush Script MT", "Brush Script Std", cursive;
+`;
+
+export const StyledNavBar = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -13,5 +17,3 @@ const StyledNavBar = styled.header`
 
   border-bottom: 1px solid #dbdbdb;
 `;
-
-export default StyledNavBar;
