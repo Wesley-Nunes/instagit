@@ -17,3 +17,26 @@ export const StyledNavBar = styled.header`
 
   border-bottom: 1px solid #dbdbdb;
 `;
+
+export const StyledUl = styled.ul`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 4rem; 
+  width: 50vw;
+
+  list-style: none;
+
+  & > :nth-child(n) {
+    height: 3.2rem;
+    width: 3.2rem;
+
+    font-size: 3.2rem;
+  }
+
+  & > :nth-child(n) > :visited {
+    color: black;
+  }
+`;

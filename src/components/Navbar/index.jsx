@@ -1,16 +1,22 @@
 import React from 'react';
-import {StyledTitle, StyledNavBar} from './style';
+import PropTypes from 'prop-types';
+import {StyledTitle, StyledNavBar, StyledUl} from './style';
 
-const Title = () => (
-  <StyledTitle>
-    instagit
-  </StyledTitle>
-);
-
-const NavBar = () => (
+const NavBar = ({children}) => (
   <StyledNavBar>
-    <Title />
+    <StyledTitle>
+      instagit
+    </StyledTitle>
+    <nav>
+      <StyledUl>
+        {children}
+      </StyledUl>
+    </nav>
   </StyledNavBar>
 );
+
+NavBar.propTypes = {
+  children: PropTypes.arrayOf(PropTypes.element),
+};
 
 export default NavBar;
