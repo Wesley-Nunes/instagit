@@ -11,11 +11,11 @@ const Hearder = () => (
       href="https://www.github.com/Wesley-Nunes/fcc-javascript-calculator"
       target="_blank"
       rel="noreferrer"
-      aria-label="link to repository"
+      aria-label="Link to repository"
     >
       <h3>fcc-javascript-calculator</h3>
     </a>
-    <button type="button" aria-label="open the repository options">
+    <button type="button" aria-label="Open the repository options">
       <FaRegSun />
     </button>
   </EdgeSections>
@@ -38,7 +38,7 @@ const Footer = () => (
       href="https://fcc-javascript-calculator-ten.vercel.app/"
       target="_blank"
       rel="noreferrer"
-      aria-label="link to preview"
+      aria-label="Link to preview"
     >
       Preview
     </a>
@@ -46,7 +46,7 @@ const Footer = () => (
 );
 
 const Repository = () => (
-  <StyledSection>
+  <StyledSection aria-label="Section with the repository info">
     <Hearder />
     <Body />
     <Footer />
