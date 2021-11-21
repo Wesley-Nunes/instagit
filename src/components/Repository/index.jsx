@@ -15,7 +15,7 @@ const Hearder = () => (
     >
       <h3>fcc-javascript-calculator</h3>
     </a>
-    <button type="button" aria-label="Open the repository options">
+    <button type="button" aria-label="repository options">
       <FaRegSun />
     </button>
   </EdgeSections>
@@ -31,7 +31,7 @@ const Body = () => (
 
 const Footer = () => (
   <EdgeSections>
-    <button type="button" aria-label="Favorite the current project">
+    <button type="button" aria-label="Favorite the current repository">
       <FaRegStar />
     </button>
     <a
