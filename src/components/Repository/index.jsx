@@ -7,14 +7,23 @@ import {FaRegSun, FaRegStar} from 'react-icons/fa';
 // The context will populate the values of components
 const Hearder = () => (
   <EdgeSections>
-    <h2>fcc-javascript-calculator</h2>
-    <a href="#"><FaRegSun /></a>
+    <a
+      href="https://www.github.com/Wesley-Nunes/fcc-javascript-calculator"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Link to repository"
+    >
+      <h3>fcc-javascript-calculator</h3>
+    </a>
+    <button type="button" aria-label="repository options">
+      <FaRegSun />
+    </button>
   </EdgeSections>
 );
 
 const Body = () => (
   <StyledBody>
-    <p><strong>Sobre:</strong>JavaScript Calculator
+    <p><strong>About: </strong>JavaScript Calculator
      is the fourth project of the course Front End
      Development Libraries by freecodecamp </p>
   </StyledBody>
@@ -22,13 +31,22 @@ const Body = () => (
 
 const Footer = () => (
   <EdgeSections>
-    <FaRegStar />
-    <a href="http://www.fcc-javascript-calculator-ten.vercel.app/">Preview</a>
+    <button type="button" aria-label="Favorite the current repository">
+      <FaRegStar />
+    </button>
+    <a
+      href="https://fcc-javascript-calculator-ten.vercel.app/"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Link to preview"
+    >
+      Preview
+    </a>
   </EdgeSections>
 );
 
 const Repository = () => (
-  <StyledSection>
+  <StyledSection aria-label="Section with the repository info">
     <Hearder />
     <Body />
     <Footer />
