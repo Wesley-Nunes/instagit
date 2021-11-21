@@ -1,19 +1,43 @@
 import React from 'react';
+
 import {render, screen} from '@testing-library/react';
+import {FaHome, FaSearch, FaUserCircle} from 'react-icons/fa';
+
 import NavBar from './index';
 
-
 describe('NavBar component', () => {
-  render(
-      <NavBar>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Search</a></li>
-        <li><a href="#">User</a></li>
-      </NavBar>,
-  );
+  beforeEach(() => {
+    render(
+        <NavBar>
+          <li><a href="#" aria-label="home"><FaHome /></a></li>
+          <li><a href="#" aria-label="search"><FaSearch /></a></li>
+          <li><a href="#" aria-label="profile"><FaUserCircle /></a></li>
+        </NavBar>,
+    );
+  });
 
-  it('Should title be in the document', () => {
-    const title = screen.getByText('instagit');
+  it('renders a banner with the NavBar content', () => {
+    const banner = screen.getByRole('banner');
+    expect(banner).toBeInTheDocument();
+  });
+
+  it('renders a heading with the name "instagit"', () => {
+    const title = screen.getByRole('heading', {name: /instagit/i});
+    expect(title).toBeInTheDocument();
+  });
+
+  it('renders a link with the name "home"', () => {
+    const title = screen.getByRole('link', {name: /home/i});
+    expect(title).toBeInTheDocument();
+  });
+
+  it('renders a link with the name "search"', () => {
+    const title = screen.getByRole('link', {name: /search/i});
+    expect(title).toBeInTheDocument();
+  });
+
+  it('renders a link with the name "profile"', () => {
+    const title = screen.getByRole('link', {name: /profile/i});
     expect(title).toBeInTheDocument();
   });
 });
