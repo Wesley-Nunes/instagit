@@ -1,40 +1,49 @@
 import styled from 'styled-components';
 
-export const StyledSection = styled.section`
+const FlexWrapper = styled.section`
   display: flex;
+  align-items: center;
+
+  width: 100vw;
+`;
+
+export const StyledSection = styled(FlexWrapper)`
   flex-direction: column;
   justify-content: end;
-  align-items: center;
 
   // space-up + hearder + body + Footer
   height: ${3+4+32+4}rem;
-  width: 100vw;
 
   background-color: #fafafa;
 `;
 
-export const EdgeSections = styled.section`
-  display: flex;
+export const EdgeSections = styled(FlexWrapper)`
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 
   height: 4rem;
-  width: 100vw;
+
+  font-size: 1.5rem;
 
   background-color: #fff;
 
   padding: 0 2rem;
+
+  & > :nth-child(n) {
+    color: black;
+    background-color: #fff;
+
+    border: none;
+
+    cursor: pointer;
+  }
 `;
 
-export const StyledBody = styled.main`
-  display: flex;
+export const StyledBody = styled(FlexWrapper).attrs({as: 'main'})`
   flex-direction: column;    
-  align-items: center;
   justify-content: center;
 
   height: 32rem;
-  width: 100vw;
 
   background-color: aliceblue;
 
