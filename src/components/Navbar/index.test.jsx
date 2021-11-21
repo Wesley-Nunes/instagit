@@ -35,4 +35,9 @@ describe('NavBar component', () => {
     const title = screen.getByRole('link', {name: /search/i});
     expect(title).toBeInTheDocument();
   });
+
+  it('renders a link with the name "profile"', () => {
+    const title = screen.getByRole('link', {name: /profile/i});
+    expect(title).toBeInTheDocument();
+  });
 });
