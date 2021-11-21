@@ -1,18 +1,19 @@
 import React from 'react';
 
+import {FaHome, FaSearch, FaUserCircle} from 'react-icons/fa';
+
 import GlobalStyles from './GlobalStyles';
 
 import Navbar from './components/Navbar';
 import Repository from './components/Repository';
-import {FaHome, FaSearch, FaUserCircle} from 'react-icons/fa';
 
 const App = () => (
   <>
     <GlobalStyles />
     <Navbar>
-      <li><a href="#"><FaHome /></a></li>
-      <li><a href="#"><FaSearch /></a></li>
-      <li><a href="#"><FaUserCircle /></a></li>
+      <li><a href="#" aria-label="home"><FaHome /></a></li>
+      <li><a href="#" aria-label="search"><FaSearch /></a></li>
+      <li><a href="#" aria-label="profile"><FaUserCircle /></a></li>
     </Navbar>
     <Repository />
     <Repository />
