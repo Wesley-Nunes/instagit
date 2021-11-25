@@ -1,8 +1,8 @@
 import React from 'react';
 
-import {StyledSection, EdgeSections, StyledBody} from './RepositoryStyle';
+import {OptionsIcon, StarUncheckedIcon} from '../../services/icons/icons';
 
-import {FaRegSun, FaRegStar} from 'react-icons/fa';
+import {StyledSection, EdgeSections, StyledBody} from './RepositoryStyle';
 
 // The context will populate the values of components
 const Hearder = () => (
@@ -16,7 +16,7 @@ const Hearder = () => (
       <h3>fcc-javascript-calculator</h3>
     </a>
     <button type="button" aria-label="repository options">
-      <FaRegSun />
+      <OptionsIcon />
     </button>
   </EdgeSections>
 );
@@ -32,7 +32,7 @@ const Body = () => (
 const Footer = () => (
   <EdgeSections>
     <button type="button" aria-label="Favorite the current repository">
-      <FaRegStar />
+      <StarUncheckedIcon />
     </button>
     <a
       href="https://fcc-javascript-calculator-ten.vercel.app/"

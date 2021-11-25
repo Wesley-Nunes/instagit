@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 
-import {FaHome, FaSearch, FaUserCircle} from 'react-icons/fa';
-
-import GlobalStyles from './GlobalStyles';
+import {HomeIcon, SearchIcon, UserCircleIcon} from './services/icons/icons';
 
 import {Navbar, Repository, Profile} from './components/shared';
+
+import GlobalStyles from './GlobalStyles';
 
 const App = () => {
   const [isHomePage, setToHomePage] = useState(true);
@@ -16,12 +16,12 @@ const App = () => {
         <li><a
           href="#"
           aria-label="home"
-          onClick={() => setToHomePage(true)}><FaHome /></a></li>
-        <li><a href="#" aria-label="search"><FaSearch /></a></li>
+          onClick={() => setToHomePage(true)}><HomeIcon /></a></li>
+        <li><a href="#" aria-label="search"><SearchIcon /></a></li>
         <li><a
           href="#"
           aria-label="profile"
-          onClick={() => setToHomePage(false)}><FaUserCircle /></a></li>
+          onClick={() => setToHomePage(false)}><UserCircleIcon /></a></li>
       </Navbar>
       {
         isHomePage ? <Repository /> : <Profile />
