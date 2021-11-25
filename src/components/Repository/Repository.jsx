@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {StyledSection, EdgeSections, StyledBody} from './style';
+import {StyledSection, EdgeSections, StyledBody} from './RepositoryStyle';
 
 import {FaRegSun, FaRegStar} from 'react-icons/fa';
 

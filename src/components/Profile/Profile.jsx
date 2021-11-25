@@ -2,7 +2,7 @@ import React from 'react';
 
 import {FaUserCircle} from 'react-icons/fa';
 
-import {UserDetailsWrapper, ProfileWrapper, RepoWrapper} from './style';
+import {UserDetailsWrapper, ProfileWrapper, RepoWrapper} from './ProfileStyle';
 
 // The context will populate the values of components
 const UserDetails = () => (

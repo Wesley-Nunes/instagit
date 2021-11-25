@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import {StyledTitle, StyledNavBar, StyledUl} from './style';
+import {StyledTitle, StyledNavBar, StyledUl} from './NavbarStyle';
 
 const NavBar = ({children}) => (
   <StyledNavBar>

@@ -4,9 +4,7 @@ import {FaHome, FaSearch, FaUserCircle} from 'react-icons/fa';
 
 import GlobalStyles from './GlobalStyles';
 
-import Navbar from './components/Navbar';
-import Repository from './components/Repository';
-import Profile from './components/Profile';
+import {Navbar, Repository, Profile} from './components/shared';
 
 const App = () => {
   const [isHomePage, setToHomePage] = useState(true);

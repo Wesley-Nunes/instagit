@@ -3,7 +3,7 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import {FaHome, FaSearch, FaUserCircle} from 'react-icons/fa';
 
-import NavBar from './index';
+import NavBar from './NavBar';
 
 describe('NavBar component', () => {
   beforeEach(() => {

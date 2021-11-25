@@ -2,7 +2,7 @@ import React from 'react';
 
 import {render, screen} from '@testing-library/react';
 
-import Profile from './index';
+import Profile from './Profile';
 
 describe('Profile component', () => {
   beforeEach(() => render(<Profile />));
