@@ -1,17 +1,17 @@
 import React from 'react';
 
 import {render, screen} from '@testing-library/react';
-import {FaHome, FaSearch, FaUserCircle} from 'react-icons/fa';
+import {HomeIcon, SearchIcon, UserCircleIcon} from '../../services/icons/icons';
 
-import NavBar from './index';
+import NavBar from './NavBar';
 
 describe('NavBar component', () => {
   beforeEach(() => {
     render(
         <NavBar>
-          <li><a href="#" aria-label="home"><FaHome /></a></li>
-          <li><a href="#" aria-label="search"><FaSearch /></a></li>
-          <li><a href="#" aria-label="profile"><FaUserCircle /></a></li>
+          <li><a href="#" aria-label="home"><HomeIcon /></a></li>
+          <li><a href="#" aria-label="search"><SearchIcon /></a></li>
+          <li><a href="#" aria-label="profile"><UserCircleIcon /></a></li>
         </NavBar>,
     );
   });

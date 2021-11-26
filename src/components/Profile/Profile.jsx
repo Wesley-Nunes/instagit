@@ -1,13 +1,13 @@
 import React from 'react';
 
-import {FaUserCircle} from 'react-icons/fa';
+import {UserCircleIcon} from '../../services/icons/icons';
 
-import {UserDetailsWrapper, ProfileWrapper, RepoWrapper} from './style';
+import {UserDetailsWrapper, ProfileWrapper, RepoWrapper} from './ProfileStyle';
 
 // The context will populate the values of components
 const UserDetails = () => (
   <UserDetailsWrapper aria-label="user details">
-    <h3><FaUserCircle /></h3>
+    <h3><UserCircleIcon /></h3>
     <div>
       <h2 aria-label="name">Wes</h2>
       <h3 aria-label="github user">Wesley-Nunes</h3>

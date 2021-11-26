@@ -2,7 +2,7 @@ import React from 'react';
 
 import {render, screen} from '@testing-library/react';
 
-import Repository from './index';
+import Repository from './Repository';
 
 describe('Repository component', () => {
   beforeEach(() => {
