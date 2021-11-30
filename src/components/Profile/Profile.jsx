@@ -1,34 +1,40 @@
 import React from 'react';
 
 import {UserCircleIcon} from '../../services/icons/icons';
+import {useApi} from '../../services/stateManagement/apiState';
 
 import {UserDetailsWrapper, ProfileWrapper, RepoWrapper} from './ProfileStyle';
 
 // The context will populate the values of components
-const UserDetails = () => (
-  <UserDetailsWrapper aria-label="user details">
-    <h3><UserCircleIcon /></h3>
-    <div>
-      <h2 aria-label="name">Wes</h2>
-      <h3 aria-label="github user">Wesley-Nunes</h3>
-      <p aria-label="bio">
-        JavaScript Software Developer | FrontEnd Software Developer |
-      </p>
-    </div>
-  </UserDetailsWrapper>
-);
+const UserDetails = () => {
+  const {getUserDetails} = useApi();
+  const {name, login, bio} = getUserDetails();
 
-const MostUsedLanguages = () => (
-  <section aria-label="most used languages">
-    <h3>Most Used Languages</h3>
-    <ol>
-      <li>HTML - 52.05%</li>
-      <li>JavaScript - 39.99%</li>
-      <li>CSS  - 6.75%</li>
-      <li>TypeScript - 1.21%</li>
-    </ol>
-  </section>
-);
+  return (
+    <UserDetailsWrapper aria-label="user details">
+      <h3><UserCircleIcon /></h3>
+      <div>
+        <h2 aria-label="name">{name}</h2>
+        <h3 aria-label="github user">{login}</h3>
+        <p aria-label="bio">{bio}</p>
+      </div>
+    </UserDetailsWrapper>
+  );
+};
+
+const MostUsedLanguages = () => {
+  return (
+    <section aria-label="most used languages">
+      <h3>Most Used Languages</h3>
+      <ol>
+        <li>HTML - 52.05%</li>
+        <li>JavaScript - 39.99%</li>
+        <li>CSS  - 6.75%</li>
+        <li>TypeScript - 1.21%</li>
+      </ol>
+    </section>
+  );
+};
 
 const PinRepos = () => (
   <section aria-label="pinned repositories">
