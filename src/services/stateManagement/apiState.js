@@ -31,7 +31,7 @@ function ApiProvider({children}) {
         .then((response) => {
           setRepositories(response.data);
         });
-  }, []);
+  }, [username]);
 
   const getUserDetails = () => {
     return userDetails;
