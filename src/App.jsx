@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 
-import {HomeIcon, SearchIcon, UserCircleIcon} from './services/icons/icons';
+import {HomeIcon, UserCircleIcon} from './services/icons/icons';
 
-import {Navbar, RepositoryWrapper, Profile} from './components/shared';
+import {Navbar, RepositoryWrapper, Profile, Search} from './components/shared';
 
 import GlobalStyles from './GlobalStyles';
 
@@ -17,7 +17,7 @@ const App = () => {
           href="#"
           aria-label="home"
           onClick={() => setToHomePage(true)}><HomeIcon /></a></li>
-        <li><a href="#" aria-label="search"><SearchIcon /></a></li>
+        <li><Search/></li>
         <li><a
           href="#"
           aria-label="profile"
