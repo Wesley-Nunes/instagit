@@ -2,7 +2,10 @@ import React, {useState} from 'react';
 
 import {HomeIcon, UserCircleIcon} from './services/icons/icons';
 
-import {Navbar, RepositoryWrapper, Profile, Search} from './components/shared';
+import {Navbar, Search} from './components/shared';
+
+import {HomePage} from './pages/HomePage';
+import {ProfilePage} from './pages/ProfilePage';
 
 import GlobalStyles from './GlobalStyles';
 
@@ -24,7 +27,7 @@ const App = () => {
           onClick={() => setToHomePage(false)}><UserCircleIcon /></a></li>
       </Navbar>
       {
-        isHomePage ? <RepositoryWrapper /> : <Profile />
+        isHomePage ? <HomePage /> : <ProfilePage />
       }
     </>
   );
