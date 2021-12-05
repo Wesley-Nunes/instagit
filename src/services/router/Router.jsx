@@ -23,8 +23,8 @@ const Router = () => {
             <HomeIcon />
           </Link>
         </li>
-        <li>
-          <Search />
+        <li aria-label="search" tabIndex="0">
+          <Search/>
         </li>
         <li>
           <Link to={`${basename}/profile`} aria-label="profile">
