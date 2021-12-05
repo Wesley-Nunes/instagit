@@ -2,9 +2,9 @@ import React from 'react';
 
 import {BrowserRouter, Route, Routes, Link, Navigate} from 'react-router-dom';
 
-import {Navbar, Search} from '../../components/shared';
+import {Navbar, Search, AvatarUser} from '../../components/shared';
 
-import {HomeIcon, UserCircleIcon} from '../icons/icons';
+import {HomeIcon} from '../icons/icons';
 import {useApi} from '../stateManagement/apiState';
 
 import {HomePage} from '../../pages/HomePage';
@@ -28,7 +28,7 @@ const Router = () => {
         </li>
         <li>
           <Link to={`${basename}/profile`} aria-label="profile">
-            <UserCircleIcon />
+            <AvatarUser />
           </Link>
         </li>
       </Navbar>
