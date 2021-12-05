@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+
 import React, {createContext, useContext, useState, useEffect} from 'react';
 
 import PropTypes from 'prop-types';
@@ -17,14 +19,16 @@ function ApiProvider({children}) {
     name: '',
     login: '',
     bio: '',
+    imgUrl: '',
   });
   const [respositories, setRepositories] = useState([]);
 
   useEffect(() => {
     getProfileInfo(username)
         .then((response) => {
-          const {name, login, bio} = response.data;
-          setUserDetails({name, login, bio});
+          const {name, login, bio, avatar_url} = response.data;
+          console.log(response.data);
+          setUserDetails({name, login, bio, imgUrl: avatar_url});
         });
 
     getRepos(username)

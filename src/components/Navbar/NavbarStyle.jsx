@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
-export const StyledTitle = styled.h1`
-  font: italic 4rem "Brush Script MT", "Brush Script Std", cursive;
-`;
-
 const FlexRowWrapper = styled.section`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-between;
+`;
+
+export const StyledTitle = styled.h1`
+  font: 4rem 'Patrick Hand', cursive, sans-serif;
 `;
 
 export const StyledNavBar = styled(FlexRowWrapper).attrs({as: 'header'})`
@@ -18,11 +18,13 @@ export const StyledNavBar = styled(FlexRowWrapper).attrs({as: 'header'})`
   background-color: #fff;
 
   border-bottom: 1px solid #dbdbdb;
+
+  padding: 0 2rem;
 `;
 
 export const StyledUl = styled(FlexRowWrapper).attrs({as: 'ul'})`
   height: 4rem; 
-  width: 50vw;
+  width: 40vw;
 
   list-style: none;
 
@@ -35,6 +37,6 @@ export const StyledUl = styled(FlexRowWrapper).attrs({as: 'ul'})`
   }
 
   & > :nth-child(n) > :visited {
-    color: black;
+    color: #000;
   }
 `;

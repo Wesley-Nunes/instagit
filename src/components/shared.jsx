@@ -4,3 +4,4 @@ export {
   default as RepositoryWrapper,
 } from './RepositoryWrapper/RepositoryWrapper';
 export {default as Profile} from './Profile/Profile';
+export {default as AvatarUser} from './AvatarUser/AvatarUser';

@@ -7,7 +7,7 @@ import {StyledTitle, StyledNavBar, StyledUl} from './NavbarStyle';
 const NavBar = ({children}) => (
   <StyledNavBar>
     <StyledTitle>
-      instagit
+      Instagit
     </StyledTitle>
     <nav>
       <StyledUl>
