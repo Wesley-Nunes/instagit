@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import {SearchIcon} from '../../services/icons/icons';
 import {useApi} from '../../services/stateManagement/apiState';
 
-import StyledInput from './SearchStyle';
+import {StyledLabel, StyledInput} from './SearchStyle';
 
 const Search = () => {
   const [visibility, setVisibility] = useState('collapse');
@@ -22,9 +22,9 @@ const Search = () => {
 
   return (
     <>
-      <label htmlFor="search" onClick={handleClick}>
+      <StyledLabel htmlFor="search" onClick={handleClick}>
         <SearchIcon/>
-      </label>
+      </StyledLabel>
       <StyledInput
         type="text"
         id="search"
