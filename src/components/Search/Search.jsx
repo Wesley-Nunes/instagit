@@ -7,22 +7,35 @@ import {StyledLabel, StyledInput} from './SearchStyle';
 
 const Search = () => {
   const [visibility, setVisibility] = useState('collapse');
+  const [user, setUser] = useState('');
   const {search} = useApi();
+
+  const handleChange = (event) => {
+    setUser(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    search(user);
+    setVisibility('collapse');
+  };
 
   const handleClick = () => {
     if (visibility === 'collapse') {
       setVisibility('visible');
     } else {
-      const input = document.querySelector('#search');
-      const user = input.value;
-      search(user);
-      setVisibility('collapse');
+      handleSubmit(event);
     };
   };
 
   return (
-    <>
-      <StyledLabel htmlFor="search" onClick={handleClick}>
+    <form onSubmit={handleSubmit}>
+      <StyledLabel
+        htmlFor="search"
+        type="submit"
+        value="Submit"
+        onClick={handleClick}
+      >
         <SearchIcon/>
       </StyledLabel>
       <StyledInput
@@ -31,8 +44,10 @@ const Search = () => {
         name="search"
         placeholder="Search for Github user"
         visibility={visibility}
+        user={user}
+        onChange={handleChange}
       />
-    </>
+    </form>
   );
 };
 
