@@ -1,7 +1,8 @@
 import React from 'react';
 
-import {UserCircleIcon} from '../../services/icons/icons';
 import {useApi} from '../../services/stateManagement/apiState';
+
+import {AvatarUser} from '../shared';
 
 import {UserDetailsWrapper, ProfileWrapper, RepoWrapper} from './ProfileStyle';
 
@@ -12,7 +13,7 @@ const UserDetails = () => {
 
   return (
     <UserDetailsWrapper aria-label="user details">
-      <h3><UserCircleIcon /></h3>
+      <h3><AvatarUser /></h3>
       <div>
         <h2 aria-label="name">{name}</h2>
         <h3 aria-label="github user">{login}</h3>

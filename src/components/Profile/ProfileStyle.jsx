@@ -32,8 +32,10 @@ export const UserDetailsWrapper = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 20rem;
-  justify-items: center;
   align-items: center;
+  justify-items: center;
+
+  width: 100vw;
 
   & > :nth-child(1) {
     font-size: 5rem;
