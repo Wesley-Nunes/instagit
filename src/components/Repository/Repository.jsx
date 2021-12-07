@@ -14,7 +14,7 @@ const Hearder = ({title, linkToRepository}) => (
       rel="noreferrer"
       aria-label="Link to repository"
     >
-      <h3>{title}</h3>
+      <h2>{title}</h2>
     </a>
     <button type="button" aria-label="repository options">
       <OptionsIcon />

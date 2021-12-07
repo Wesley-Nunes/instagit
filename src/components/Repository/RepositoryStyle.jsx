@@ -23,11 +23,13 @@ export const EdgeSections = styled(FlexWrapper)`
 
   height: 4rem;
 
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 
   background-color: #fff;
 
   padding: 0 2rem;
+  
+  border: 1px solid #dbdbdb;
 
   & > :nth-child(n) {
     color: black;
@@ -45,7 +47,7 @@ export const StyledBody = styled(FlexWrapper).attrs({as: 'main'})`
 
   height: 32rem;
 
-  background-color: aliceblue;
+  background-color: #8cc3f2;
 
   font-size: 1.8rem;
 
