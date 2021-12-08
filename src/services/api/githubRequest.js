@@ -1,12 +1,13 @@
 import axios from 'axios';
 
 /**
- * Get the user details of GitHub API.
- * @param   {String}            username
- * @return  {Promise<Object>}   response
+ * Get the user details of GitHub API using fetch.
+ * @param   {String}  username
+ * @return  {JSON<Object>}   response
  */
 async function getProfileInfo(username) {
-  return await axios.get(`https://api.github.com/users/${username}`);
+  const response = await fetch(`https://api.github.com/users/${username}`);
+  return await response.json();
 }
 
 /**

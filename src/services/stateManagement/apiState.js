@@ -25,9 +25,9 @@ function ApiProvider({children}) {
 
   useEffect(() => {
     getProfileInfo(username)
-        .then((response) => {
-          const {name, login, bio, avatar_url} = response.data;
-          console.log(response.data);
+        .then((profile) => {
+          console.log(profile);
+          const {name, login, bio, avatar_url} = profile;
           setUserDetails({name, login, bio, imgUrl: avatar_url});
         });
 
