@@ -2,9 +2,13 @@ import React from 'react';
 
 import {useApi} from '../../services/stateManagement/apiState';
 
-import {AvatarUser} from '../shared';
+import {AvatarUser} from '../';
 
-import {UserDetailsWrapper, ProfileWrapper, RepoWrapper} from './ProfileStyle';
+import {
+  UserDetailsWrapper,
+  ProfileWrapper,
+  RepoWrapper,
+} from './ProfileStyle';
 
 // The context will populate the values of components
 const UserDetails = () => {

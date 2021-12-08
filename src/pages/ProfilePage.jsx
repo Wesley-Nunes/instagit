@@ -1,1 +1,1 @@
-export {Profile as ProfilePage} from '../components/shared';
+export {Profile as ProfilePage} from '../components';

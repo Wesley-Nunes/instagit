@@ -1,1 +1,2 @@
-export {RepositoryWrapper as HomePage} from '../components/shared';
+export {RepositoryWrapper as HomePage} from '../components';
+
