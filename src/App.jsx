@@ -1,14 +1,17 @@
 import React from 'react';
 
-import Router from './services/router/Router';
-
+import {Router, BrowserRouter} from './services/router/Router';
+import {Navbar} from './components';
 import GlobalStyles from './GlobalStyles';
 
 const App = () => {
   return (
     <>
-      <GlobalStyles />
-      <Router />
+      <BrowserRouter>
+        <GlobalStyles />
+        <Navbar />
+        <Router />
+      </BrowserRouter>
     </>
   );
 };

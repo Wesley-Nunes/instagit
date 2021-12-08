@@ -1,24 +1,34 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
-import PropTypes from 'prop-types';
-
+import {Search, AvatarUser} from '..';
+import {getBasename} from '../../services/router/Router';
+import {HomeIcon} from '../../services/icons/icons';
 import {StyledTitle, StyledNavBar, StyledUl} from './NavbarStyle';
 
-const NavBar = ({children}) => (
+const NavBar = () => (
   <StyledNavBar>
     <StyledTitle>
       Instagit
     </StyledTitle>
     <nav>
       <StyledUl>
-        {children}
+        <li>
+          <Link to={`${getBasename()}/home`} aria-label="home">
+            <HomeIcon />
+          </Link>
+        </li>
+        <li aria-label="search" tabIndex="0">
+          <Search />
+        </li>
+        <li>
+          <Link to={`${getBasename()}/profile`} aria-label="profile">
+            <AvatarUser />
+          </Link>
+        </li>
       </StyledUl>
     </nav>
   </StyledNavBar>
 );
-
-NavBar.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element),
-};
 
 export default NavBar;
