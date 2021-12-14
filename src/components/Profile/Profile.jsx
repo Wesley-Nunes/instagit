@@ -7,7 +7,6 @@ import {AvatarUser} from '../';
 import {
   UserDetailsWrapper,
   ProfileWrapper,
-  RepoWrapper,
 } from './ProfileStyle';
 
 // The context will populate the values of components
@@ -17,7 +16,7 @@ const UserDetails = () => {
 
   return (
     <UserDetailsWrapper aria-label="user details">
-      <h3><AvatarUser /></h3>
+      <h1><AvatarUser /></h1>
       <div>
         <h2 aria-label="name">{name}</h2>
         <h3 aria-label="github user">{login}</h3>
@@ -27,49 +26,37 @@ const UserDetails = () => {
   );
 };
 
-const MostUsedLanguages = () => {
+const MostUsedLanguage = () => {
+  const {getRepositories} = useApi();
+  const obj = {};
+  let mostUsedLanguage = '';
+  let quantity = 0;
+
+  getRepositories().forEach(({language}) => {
+    if (obj.hasOwnProperty(language)) {
+      obj[language] += 1;
+    } else {
+      obj[language] = 1;
+    }
+
+    if (obj[language] > quantity) {
+      quantity = obj[language];
+      mostUsedLanguage = language;
+    }
+  });
+
   return (
     <section aria-label="most used languages">
-      <h3>Most Used Languages</h3>
-      <ol>
-        <li>HTML - 52.05%</li>
-        <li>JavaScript - 39.99%</li>
-        <li>CSS  - 6.75%</li>
-        <li>TypeScript - 1.21%</li>
-      </ol>
+      <h3>The most used language is {mostUsedLanguage}.</h3>
+      <h3>This language is present in {quantity} repositories.</h3>
     </section>
   );
 };
 
-const PinRepos = () => (
-  <section aria-label="pinned repositories">
-    <h3>Pinned Repositories</h3>
-    <RepoWrapper>
-      <a href="https://github.com/Wesley-Nunes/courses">courses</a>
-    </RepoWrapper>
-    <RepoWrapper>
-      <a href="https://github.com/Wesley-Nunes/fcc-javascript-calculator">fcc-javascript-calculator</a>
-    </RepoWrapper>
-    <RepoWrapper>
-      <a href="https://github.com/Wesley-Nunes/gotta-catch-em-all">gotta-catch-em-all</a>
-    </RepoWrapper>
-    <RepoWrapper>
-      <a href="https://github.com/Wesley-Nunes/jogo-da-memoria">jogo-da-memoria</a>
-    </RepoWrapper>
-    <RepoWrapper>
-      <a href="https://github.com/Wesley-Nunes/Netflix-Clone">Netflix-Clone</a>
-    </RepoWrapper>
-    <RepoWrapper>
-      <a href="https://github.com/Wesley-Nunes/stats-preview-card">stats-preview-card</a>
-    </RepoWrapper>
-  </section>
-);
-
 const Profile = () => (
   <ProfileWrapper aria-label="Section with the user info">
     <UserDetails />
-    <MostUsedLanguages />
-    <PinRepos />
+    <MostUsedLanguage />
   </ProfileWrapper>
 );
 
