@@ -1,15 +1,9 @@
 import React from 'react';
-
-import {useApi} from '../../services/stateManagement/apiState';
-
 import StyledImg from './AvatarUserStyle';
 
-const AvatarUser = () => {
-  const {getUserDetails} = useApi();
-  const {imgUrl, name} = getUserDetails();
-
+const AvatarUser = ({ imgUrl, imgName }) => {  
   return (
-    <StyledImg src={imgUrl} alt={name} />
+    <StyledImg src={imgUrl} alt={imgName} data-testid="avatar-img" />
   );
 };
 
